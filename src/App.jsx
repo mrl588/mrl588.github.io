@@ -17,7 +17,7 @@ function App() {
 
 
       <>
-        <p> &copy; 2025 Michael Liu. All rights reserved. HIHIHI</p>
+        <p> &copy; 2025 Michael Liu. All rights reserved.</p>
       </>
     </>
   )
