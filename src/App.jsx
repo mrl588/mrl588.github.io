@@ -10,7 +10,7 @@ function App() {
     <>
       {" "}
       <Navbar /> 
-
+      <p> HELLO WORLD</p>
       <Hero />
       <Projects />
       <Contact />
