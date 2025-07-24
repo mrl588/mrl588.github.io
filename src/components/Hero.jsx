@@ -104,18 +104,18 @@ export const Hero = () => {
                             }}
                         >
                               {`const aboutMe: DeveloperProfile = {
-  codename: "Michael Liu",
+  user: "Michael Liu",
   stack: {
     languages: ["JavaScript", "Python", "C++"],
     frameworks: ["React", "Next.js", "Supabase"],
   },
-  traits: [
+  list: [
     "pixel-perfectionist",
     "API whisperer",
     "dark mode advocate",
     "terminal aesthetic enthusiast",
   ],
-  missionStatement:
+  string:
     "Passionate about making things work — cleanly, and intuitively",
   availability: "Available for hire",
 };`}
