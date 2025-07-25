@@ -1,11 +1,12 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
+import { Portfolio } from "./pages/Portfolio";
+import { Contact } from "./pages/Contact";
+import {Home} from "./pages/Home"
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import {motion} from "framer-motion";
+import { Routes, Route } from "react-router-dom"; 
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,20 +18,12 @@ function App() {
   return (
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
-
-      <Hero />
-      <Projects />
-      <Contact />
-
-      <motion.footer
-        className="footer"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <p> &copy; 2025 Michael Liu. All rights reserved.</p>
-      </motion.footer>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

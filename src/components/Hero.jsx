@@ -1,11 +1,14 @@
 import { motion, stagger } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import "./Hero.css";
+import { Link } from "react-router-dom";
+const MotionLink = motion(Link);
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 1.4 },
 };
 
 const staggerContainer = {
@@ -23,7 +26,7 @@ export const Hero = () => {
       className="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
+      transition={{ duration: 1.8, delay: 0.2 }}
     >
       <div className="hero-container">
         <motion.div
@@ -36,12 +39,12 @@ export const Hero = () => {
             className="hero-badge"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1.8, ease: "easeOut" }}
           >
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 1.4, delay: 0.3 }}
             >
               Hello, I'm
             </motion.span>
@@ -61,23 +64,20 @@ export const Hero = () => {
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a
-              href="#projects"
-              className="cta-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.a>
+            <MotionLink whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+            to="/portfolio" className="cta-primary"
+            > 
+                View My Work
+            </MotionLink>
 
-            <motion.a
-              href="#contacts"
+            <MotionLink 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}  
+              to="/contact" 
               className="cta-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              Contact Me
-            </motion.a>
+                Contact Me
+            </MotionLink>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
             <motion.a href="https://github.com/mrl588" target="_blank">
@@ -97,7 +97,7 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={(0.8, 0.4)}
         >
-          <div classname="code-display">
+          <div className="code-display">
             <SyntaxHighlighter
               language="javascript"
               style={oneLight}
@@ -117,7 +117,6 @@ export const Hero = () => {
                 whiteSpace: "pre-wrap",
                 wordBreak: "break-word",
                 maxWidth: "100%",
-
               }}
             >
               {`const aboutMe: DeveloperProfile = {
@@ -127,14 +126,13 @@ export const Hero = () => {
     frameworks: ["React", "Next.js", "Django"],
   },
   list: [
-    "adaptability enthusiast",
     "communication pro",
     "teamwork specialist",
     "bug-squashing problem solver",
 ],
   string:
     "Junior at NYU · Desktop Technician",
-  availability: "Available for hire",
+  status: "Available for hire",
 };`}
             </SyntaxHighlighter>
           </div>

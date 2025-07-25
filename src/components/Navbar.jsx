@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import "./Navbar.css";
+import {Link} from "react-router-dom"
 
 const fadeInUp = {
     initial : {opacity:0, y:20},
@@ -27,7 +29,7 @@ export const Navbar = () => {
                 whileHover= {{scale:1.05}}
                 whileTap = {{scale:0.95}}
                 > 
-                Portfolio
+                ML
             </motion.div>
 
             <motion.ul className="nav-links" 
@@ -39,21 +41,21 @@ export const Navbar = () => {
                 whileHover={{scale:1.1}}
                 whileTap={{scale:0.95}}
                 >
-                    <a href="#home"> Home </a>
+                    <Link to="/"> Home </Link>
                 </motion.li>
 
                 <motion.li variants ={fadeInUp}
                 whileHover={{scale:1.1}}
                 whileTap={{scale:0.95}}
                 >
-                    <a href="#projects"> Projects </a>
+                    <Link to="/portfolio"> Portfolio </Link>
                 </motion.li>
 
                 <motion.li variants ={fadeInUp}
                 whileHover={{scale:1.1}}
                 whileTap={{scale:0.95}}
                 >
-                    <a href="#contact"> Contact </a>
+                    <Link to="/contact"> Contact </Link>
                 </motion.li>
 
             </motion.ul>
