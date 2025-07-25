@@ -20,15 +20,13 @@ export const Projects = () => {
       id="projects"
       className="projects"
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
       <motion.h2
         variants={fadeInUp}
         initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
+        animate="animate"
       >
         My Projects
       </motion.h2>
@@ -36,8 +34,7 @@ export const Projects = () => {
           className="project-grid"
           variants={staggerContainer}
           initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
+          animate="animate"
         >
           <motion.div
             className="project-card"
