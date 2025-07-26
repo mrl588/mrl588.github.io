@@ -71,7 +71,7 @@ export const Navbar = () => {
                     whileHover={{scale:1.05}}
                     whileTap={{scale:0.95}}
                 >
-                    <a href="/pictures/ResumeWeb.pdf"> Resume </a>
+                    <a href="/pictures/ResumeWeb.pdf" target="_blank"> Resume </a>
                 </motion.li>
             </motion.ul>
 
