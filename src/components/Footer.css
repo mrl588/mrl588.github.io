@@ -4,4 +4,5 @@
   background: var(--background);
   color: var(--text-color);
   border-top: 1px solid var(--card-border);
+  max-height: 10%;
 }

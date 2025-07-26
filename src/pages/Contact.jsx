@@ -116,7 +116,7 @@ export const Contact = () => {
                 <motion.input 
                     type="text" 
                     name="name" 
-                    placeholder="Your Name..."
+                    placeholder="Name"
                     required
                     whileFocus={{scale:1.02}}
                     onChange={handleInputChange}
@@ -124,14 +124,14 @@ export const Contact = () => {
                 <motion.input 
                     type="email" 
                     name="email" 
-                    placeholder="Your Email..."
+                    placeholder="Email"
                     required
                     whileFocus={{scale:1.02}}
                     onChange={handleInputChange}
                 />
                 <motion.textarea 
                     name="message" 
-                    placeholder="Your Message..."
+                    placeholder="Message"
                     required
                     whileFocus={{scale:1.02}}
                     onChange={handleInputChange}

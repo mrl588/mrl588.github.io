@@ -1,5 +1,6 @@
 
 .projects{
+  min-height: 95vh;
   padding: 6rem 5%;
   background-color:var(--gradient-end);
   position: relative;
