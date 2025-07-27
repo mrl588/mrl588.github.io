@@ -1,0 +1,7 @@
+.home {
+    background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}

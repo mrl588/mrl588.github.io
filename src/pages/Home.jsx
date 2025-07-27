@@ -1,11 +1,13 @@
 import React from "react";
 import { Hero } from "../components/Hero";
+import { About } from "../components/About";
+import "./Home.css"
 
 export const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Hero />
-      {/* other content for your Home page */}
+      <About />
     </div>
   );
 };

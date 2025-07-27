@@ -1,0 +1,43 @@
+.about{
+    margin-top: 2rem;
+    padding: 3rem 4rem;
+
+}
+
+.about-box{
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+    padding:4rem;
+    overflow:hidden
+}
+
+.about-me{
+    height:40rem;
+    padding-right: 2rem;
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+    
+}
+
+.about-header{
+    font-size: 3rem
+}
+.about-text{
+    display:flex;
+    
+    font-size:1.4rem;
+    text-align: left
+}
+
+.about-images{
+    width: 60%;
+    padding-right: 2rem;
+    height:40rem;
+}
+
+#profile-picture{
+    max-width: 600px;
+    height:auto;
+}
