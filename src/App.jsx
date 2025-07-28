@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Portfolio } from "./pages/Portfolio";
 import { Contact } from "./pages/Contact";
+import { ScrollToTop } from "./components/ScrollToTop";
 import {Home} from "./pages/Home"
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -17,6 +18,7 @@ function App() {
   }, []);
   return (
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

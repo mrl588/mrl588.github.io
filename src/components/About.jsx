@@ -18,27 +18,36 @@ const staggerContainer = {
 export const About = () => {
   return (
     <motion.section
-        className="about"
-        initial={{opacity:0}} 
-        animate={{opacity:1}}
-        transition={{duration:1.2, delay:.2}}
+      className="about"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2, delay: 0.2 }}
     >
       <motion.div
+        id="about-box"
         className="about-box"
         variants={staggerContainer}
         initial="initial"
-        animate="animate">
+        animate="animate"
+      >
         <motion.div className="about-me">
           <motion.h1 className="about-header"> About Me </motion.h1>
           <motion.p className="about-text">
-            Im a current Junior at NYU with a major in computer Science. Im
-            currently a Desktop Technician at NYU, creating automation scripts
-            and helping others with software. I spend most of my free time going
-            to the gym,cooking, playing video games with friends or coding.
+            I'm a current Junior at NYU majoring in Computer Science. I work as
+            a Desktop Technician at NYU, where I assist with software
+            troubleshooting and create automation scripts to streamline support
+            tasks. Outside of work and school, I spend most of my time at the
+            gym, cooking, gaming with friends, or coding personal projects. I
+            enjoy solving problems, learning new technologies, and staying
+            active both mentally and physically.
           </motion.p>
         </motion.div>
         <motion.div className="about-images">
-            <motion.img id="profile-picture" src="/pictures/SafetyTag.jpg" alt="Profile Picture"/>
+          <motion.img
+            id="profile-picture"
+            src="/pictures/ProfilePicture.jpeg"
+            alt="Profile Picture"
+          />
         </motion.div>
       </motion.div>
     </motion.section>

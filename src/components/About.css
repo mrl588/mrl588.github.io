@@ -1,43 +1,110 @@
-.about{
-    margin-top: 2rem;
-    padding: 3rem 4rem;
-
+.about {
+  margin-top: 2rem;
+  padding: 3rem 8rem;
+  min-height: 80vh;
 }
 
-.about-box{
-    box-sizing: border-box;
-    display:flex;
-    justify-content: space-between;
-    gap: 4rem;
+.about-box {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.about-me {
+  height: 40rem;
+  padding-right: 2rem;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.about-header {
+  font-size: 3rem;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  text-align: left;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.about-images {
+  width: 40%;
+  padding-right: 2rem;
+  height: 40rem;
+}
+
+#profile-picture {
+  max-width: 800px;
+  height: 40rem;
+  border: 4px solid rgba(0, 0, 0, 1);
+  border-radius: 50px;
+}
+
+/* media queries */
+@media (max-width: 1300px) {
+  .about {
+    padding: 1rem;
+  }
+  .about-box {
+    flex-direction: column;
     align-items: center;
-    padding:4rem;
-    overflow:hidden
-}
+    padding: 1rem;
+  }
 
-.about-me{
-    height:40rem;
-    padding-right: 2rem;
-    border-right: 2px solid rgba(0, 0, 0, 0.5);
-    
-}
+  .about-me {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    height: auto;
+  }
+  .about-text {
+    font-size: 1.3rem;
+    width:90%
+  }
 
-.about-header{
-    font-size: 3rem
-}
-.about-text{
-    display:flex;
-    
-    font-size:1.4rem;
-    text-align: left
-}
+  .about-images {
+    width: 40%;
+    height: auto;
+    padding-right: 0;
+  }
 
-.about-images{
-    width: 60%;
-    padding-right: 2rem;
-    height:40rem;
+  #profile-picture {
+    height: auto;
+    width: 100%;
+  }
 }
+@media (max-width: 430px) {
+  .about-box {
+    padding: 0.5rem; 
+  }
 
-#profile-picture{
-    max-width: 600px;
-    height:auto;
+  .about-me {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: none;
+  }
+
+  .about-images {
+    width: 70%;
+    margin-top: 2rem;
+  }
+
+  #profile-picture {
+    width: 100%;
+    height: auto;
+  }
 }
